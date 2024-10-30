@@ -1,0 +1,18 @@
+using System;
+
+class URI {
+    static void Main(string[] args) { 
+        // Lê o tempo gasto (em horas) e a velocidade média (em km/h)
+        int tempo = int.Parse(Console.ReadLine());
+        int velocidade = int.Parse(Console.ReadLine());
+
+        // Calcula a distância percorrida
+        int distancia = tempo * velocidade;
+
+        // Calcula a quantidade de litros de combustível necessária
+        double litros = distancia / 12.0;
+
+        // Exibe o resultado com três casas decimais
+        Console.WriteLine($"{litros:F3}");
+    }
+}
