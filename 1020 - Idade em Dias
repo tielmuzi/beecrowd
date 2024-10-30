@@ -1,0 +1,18 @@
+using System;
+
+class URI {
+    static void Main(string[] args) { 
+        // Lê o valor de entrada em dias
+        int idadeEmDias = int.Parse(Console.ReadLine());
+
+        // Calcula anos, meses e dias
+        int anos = idadeEmDias / 365;
+        int meses = (idadeEmDias % 365) / 30;
+        int dias = (idadeEmDias % 365) % 30;
+
+        // Exibe o resultado no formato solicitado
+        Console.WriteLine($"{anos} ano(s)");
+        Console.WriteLine($"{meses} mes(es)");
+        Console.WriteLine($"{dias} dia(s)");
+    }
+}
