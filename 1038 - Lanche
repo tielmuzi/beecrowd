@@ -1,0 +1,38 @@
+using System;
+
+class URI {
+    static void Main(string[] args) {
+        // Lê o código e a quantidade
+        string[] entrada = Console.ReadLine().Split(' ');
+        int codigo = int.Parse(entrada[0]);
+        int quantidade = int.Parse(entrada[1]);
+        
+        // Declara variável para armazenar o preço
+        double preco = 0.0;
+        
+        // Define o preço baseado no código
+        switch (codigo) {
+            case 1:
+                preco = 4.00; // Cachorro Quente
+                break;
+            case 2:
+                preco = 4.50; // X-Salada
+                break;
+            case 3:
+                preco = 5.00; // X-Bacon
+                break;
+            case 4:
+                preco = 2.00; // Torrada simples
+                break;
+            case 5:
+                preco = 1.50; // Refrigerante
+                break;
+        }
+        
+        // Calcula o total
+        double total = preco * quantidade;
+        
+        // Imprime o resultado com 2 casas decimais
+        Console.WriteLine($"Total: R$ {total:F2}");
+    }
+}
