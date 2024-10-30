@@ -1,0 +1,14 @@
+using System;
+
+class URI {
+    static void Main(string[] args) { 
+        // Lê a distância em km
+        int distancia = int.Parse(Console.ReadLine());
+
+        // Calcula o tempo em minutos (cada km de distância leva 2 minutos para o carro Y alcançar o carro X)
+        int tempo = distancia * 2;
+
+        // Exibe o tempo seguido da mensagem "minutos"
+        Console.WriteLine($"{tempo} minutos");
+    }
+}
