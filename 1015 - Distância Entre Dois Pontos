@@ -1,0 +1,21 @@
+using System;
+
+class URI {
+    static void Main(string[] args) { 
+        // Lê as coordenadas x1 e y1 da primeira linha
+        string[] ponto1 = Console.ReadLine().Split(' ');
+        double x1 = double.Parse(ponto1[0]);
+        double y1 = double.Parse(ponto1[1]);
+
+        // Lê as coordenadas x2 e y2 da segunda linha
+        string[] ponto2 = Console.ReadLine().Split(' ');
+        double x2 = double.Parse(ponto2[0]);
+        double y2 = double.Parse(ponto2[1]);
+
+        // Calcula a distância entre os pontos
+        double distancia = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+
+        // Exibe a distância com 4 casas decimais
+        Console.WriteLine($"{distancia:F4}");
+    }
+}
