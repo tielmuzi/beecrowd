@@ -1,0 +1,20 @@
+using System;
+
+class URI {
+    static void Main(string[] args) {
+        // Lê a linha de entrada e divide em um array de strings
+        string[] valores = Console.ReadLine().Split(' ');
+        
+        // Converte os valores para inteiros
+        int a = int.Parse(valores[0]);
+        int b = int.Parse(valores[1]);
+        int c = int.Parse(valores[2]);
+        
+        // Calcula o maior valor usando a fórmula
+        int maiorAB = (a + b + Math.Abs(a - b)) / 2;
+        int maiorABC = (maiorAB + c + Math.Abs(maiorAB - c)) / 2;
+        
+        // Imprime o resultado
+        Console.WriteLine($"{maiorABC} eh o maior");
+    }
+}
