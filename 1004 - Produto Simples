@@ -1,0 +1,18 @@
+using System;
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        // Lê os dois valores inteiros
+        int A = int.Parse(Console.ReadLine());
+        int B = int.Parse(Console.ReadLine());
+
+        // Calcula o produto e atribui o resultado à variável PROD
+        int PROD = A * B;
+
+        // Exibe o resultado no formato solicitado
+        Console.WriteLine("PROD = " + PROD);
+    }
+
+}
