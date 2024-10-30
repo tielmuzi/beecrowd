@@ -1,0 +1,20 @@
+using System;
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        // Constante para o valor de π
+        double pi = 3.14159;
+
+        // Lê o valor do raio
+        double raio = double.Parse(Console.ReadLine());
+
+        // Calcula a área usando a fórmula: area = π * raio^2
+        double area = pi * Math.Pow(raio, 2);
+
+        // Exibe o resultado com 4 casas decimais
+        Console.WriteLine("A=" + area.ToString("F4"));
+    }
+
+}
