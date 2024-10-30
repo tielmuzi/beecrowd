@@ -1,0 +1,20 @@
+using System;
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        // Lê o número do funcionário, as horas trabalhadas e o valor por hora
+        int numeroFuncionario = int.Parse(Console.ReadLine());
+        int horasTrabalhadas = int.Parse(Console.ReadLine());
+        double valorPorHora = double.Parse(Console.ReadLine());
+
+        // Calcula o salário
+        double salario = horasTrabalhadas * valorPorHora;
+
+        // Exibe o número do funcionário e o salário com duas casas decimais
+        Console.WriteLine("NUMBER = " + numeroFuncionario);
+        Console.WriteLine("SALARY = U$ " + salario.ToString("F2"));
+    }
+
+}
