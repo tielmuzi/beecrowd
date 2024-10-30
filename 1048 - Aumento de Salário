@@ -1,0 +1,31 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        // Leitura do salário
+        double salario = double.Parse(Console.ReadLine());
+        double novoSalario, reajusteGanho, percentualReajuste;
+
+        // Determinando o percentual de reajuste com base no salário
+        if (salario <= 400.00) {
+            percentualReajuste = 0.15; // 15%
+        } else if (salario <= 800.00) {
+            percentualReajuste = 0.12; // 12%
+        } else if (salario <= 1200.00) {
+            percentualReajuste = 0.10; // 10%
+        } else if (salario <= 2000.00) {
+            percentualReajuste = 0.07; // 7%
+        } else {
+            percentualReajuste = 0.04; // 4%
+        }
+
+        // Calculando o valor do reajuste ganho e o novo salário
+        reajusteGanho = salario * percentualReajuste;
+        novoSalario = salario + reajusteGanho;
+
+        // Imprimindo os resultados
+        Console.WriteLine($"Novo salario: {novoSalario:F2}");
+        Console.WriteLine($"Reajuste ganho: {reajusteGanho:F2}");
+        Console.WriteLine($"Em percentual: {percentualReajuste * 100} %");
+    }
+}
