@@ -1,0 +1,17 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        // Leitura dos dois valores inteiros
+        string[] input = Console.ReadLine().Split(' ');
+        int A = int.Parse(input[0]);
+        int B = int.Parse(input[1]);
+
+        // Verificação se A é múltiplo de B ou B é múltiplo de A
+        if (A % B == 0 || B % A == 0) {
+            Console.WriteLine("Sao Multiplos");
+        } else {
+            Console.WriteLine("Nao sao Multiplos");
+        }
+    }
+}
