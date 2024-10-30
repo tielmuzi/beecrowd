@@ -1,0 +1,15 @@
+using System;
+
+class URI {
+    static void Main(string[] args) { 
+        // Lê a distância total percorrida (inteiro) e o total de combustível gasto (double)
+        int X = int.Parse(Console.ReadLine());
+        double Y = double.Parse(Console.ReadLine());
+
+        // Calcula o consumo médio
+        double consumoMedio = X / Y;
+
+        // Exibe o consumo médio com 3 casas decimais seguido da mensagem "km/l"
+        Console.WriteLine($"{consumoMedio:F3} km/l");
+    }
+}
