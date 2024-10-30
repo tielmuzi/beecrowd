@@ -1,0 +1,34 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        // Leitura dos horários de início e fim
+        string[] input = Console.ReadLine().Split(' ');
+        int horaInicio = int.Parse(input[0]);
+        int minutoInicio = int.Parse(input[1]);
+        int horaFim = int.Parse(input[2]);
+        int minutoFim = int.Parse(input[3]);
+
+        // Cálculo da duração
+        int duracaoHoras, duracaoMinutos;
+
+        // Convertendo tudo para minutos para facilitar o cálculo
+        int totalMinutosInicio = horaInicio * 60 + minutoInicio;
+        int totalMinutosFim = horaFim * 60 + minutoFim;
+
+        // Se a hora final for menor que a hora inicial, significa que terminou no dia seguinte
+        if (totalMinutosFim <= totalMinutosInicio) {
+            totalMinutosFim += 24 * 60; // Adiciona 24 horas em minutos
+        }
+
+        // Cálculo da duração total
+        int totalMinutosDuracao = totalMinutosFim - totalMinutosInicio;
+        
+        // Cálculo das horas e minutos
+        duracaoHoras = totalMinutosDuracao / 60;
+        duracaoMinutos = totalMinutosDuracao % 60;
+
+        // Exibição do resultado
+        Console.WriteLine($"O JOGO DUROU {duracaoHoras} HORA(S) E {duracaoMinutos} MINUTO(S)");
+    }
+}
