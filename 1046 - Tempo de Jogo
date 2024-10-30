@@ -1,0 +1,27 @@
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        // Leitura das horas de início e fim
+        string[] input = Console.ReadLine().Split(' ');
+        int horaInicio = int.Parse(input[0]);
+        int horaFim = int.Parse(input[1]);
+
+        int duracao;
+
+        // Cálculo da duração
+        if (horaInicio < horaFim) {
+            duracao = horaFim - horaInicio;
+        } else {
+            duracao = 24 - horaInicio + horaFim;
+        }
+
+        // Se ambos os horários forem 0, a duração é 24 horas
+        if (horaInicio == 0 && horaFim == 0) {
+            duracao = 24;
+        }
+
+        // Exibição do resultado
+        Console.WriteLine($"O JOGO DUROU {duracao} HORA(S)");
+    }
+}
