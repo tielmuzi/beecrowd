@@ -1,0 +1,23 @@
+using System;
+
+class URI {
+    static void Main(string[] args) { 
+        // Lê o valor de entrada
+        int valor = int.Parse(Console.ReadLine());
+        
+        // Guarda o valor original para exibir posteriormente
+        int original = valor;
+
+        // Define as denominações das notas
+        int[] notas = { 100, 50, 20, 10, 5, 2, 1 };
+        
+        Console.WriteLine(original);
+
+        // Calcula a quantidade de cada nota necessária
+        foreach (int nota in notas) {
+            int quantidade = valor / nota; // Calcula quantas notas desse tipo são necessárias
+            Console.WriteLine($"{quantidade} nota(s) de R$ {nota},00");
+            valor %= nota; // Atualiza o valor para o restante após usar a nota atual
+        }
+    }
+}
