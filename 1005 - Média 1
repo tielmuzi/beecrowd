@@ -1,0 +1,18 @@
+using System;
+
+class URI {
+
+    static void Main(string[] args) { 
+
+        // Lê os valores de ponto flutuante para A e B
+        double A = double.Parse(Console.ReadLine());
+        double B = double.Parse(Console.ReadLine());
+
+        // Calcula a média ponderada
+        double MEDIA = (A * 3.5 + B * 7.5) / 11.0;
+
+        // Exibe o resultado com 5 casas decimais
+        Console.WriteLine("MEDIA = " + MEDIA.ToString("F5"));
+    }
+
+}
