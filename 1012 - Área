@@ -1,0 +1,30 @@
+using System;
+
+class URI {
+    static void Main(string[] args) {
+        // Lê a linha de entrada e divide em um array de strings
+        string[] valores = Console.ReadLine().Split(' ');
+        
+        // Converte os valores para double
+        double A = double.Parse(valores[0]);
+        double B = double.Parse(valores[1]);
+        double C = double.Parse(valores[2]);
+        
+        // Define o valor de PI
+        const double PI = 3.14159;
+        
+        // Calcula as áreas
+        double areaTriangulo = (A * C) / 2.0;
+        double areaCirculo = PI * Math.Pow(C, 2);
+        double areaTrapezio = ((A + B) * C) / 2.0;
+        double areaQuadrado = Math.Pow(B, 2);
+        double areaRetangulo = A * B;
+        
+        // Imprime os resultados formatados com 3 casas decimais
+        Console.WriteLine($"TRIANGULO: {areaTriangulo:F3}");
+        Console.WriteLine($"CIRCULO: {areaCirculo:F3}");
+        Console.WriteLine($"TRAPEZIO: {areaTrapezio:F3}");
+        Console.WriteLine($"QUADRADO: {areaQuadrado:F3}");
+        Console.WriteLine($"RETANGULO: {areaRetangulo:F3}");
+    }
+}
