@@ -1,0 +1,23 @@
+using System;
+
+class URI {
+    static void Main(string[] args) { 
+        // Lê o nome do vendedor
+        string nomeVendedor = Console.ReadLine();
+
+        // Lê o salário fixo do vendedor
+        double salarioFixo = double.Parse(Console.ReadLine());
+
+        // Lê o total de vendas do vendedor
+        double totalVendas = double.Parse(Console.ReadLine());
+
+        // Calcula a comissão (15% sobre o total de vendas)
+        double comissao = totalVendas * 0.15;
+
+        // Calcula o total a receber
+        double totalReceber = salarioFixo + comissao;
+
+        // Imprime o resultado com duas casas decimais
+        Console.WriteLine($"TOTAL = R$ {totalReceber:F2}");
+    }
+}
